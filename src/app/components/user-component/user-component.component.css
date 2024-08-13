@@ -1,0 +1,270 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    padding: 0px;
+    margin: 0px;
+}
+/*Product main detail*/
+.completeProduct{
+    display: flex;
+    flex-direction: column;
+}
+.productMainDetail{
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+}
+.productPicture {
+    background-color: white;
+    /* border: 2px solid black; */
+    border-radius: 50%;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
+    display: inline-block;
+    max-width: 100%; /* Ensure image doesn't exceed container */ 
+    transition: background-color 0.3s ease;
+}
+
+.discountCard {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    background-color: #e74c3c; 
+    color: white;
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 1; 
+    transform: rotate(20deg)
+  }
+.productPicture :hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(196, 194, 194);
+}
+.productPicture img{
+    height:300px;
+    width: 300px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+        /*60% percent for show the detail of the product*/
+.mainDetail{
+    padding-left: 0.5%;
+    width: 76vw;
+}
+.mainDetail p b{
+    margin-right: 40px;
+}
+
+        /*Inner detail where we show name and value of the product*/
+.innerDetail{
+    display: flex;
+    flex-direction: row;
+    gap: 0.1rem;
+}
+
+
+        /*style of the description*/
+.description{
+    color: rgb(72, 71, 71);
+    margin-top: 1.5%;
+    margin-bottom: 1.7%;
+    line-height: 1.2;
+    font-family: Arial, sans-serif;
+}
+.description h2{
+    font-size: 22px;
+}
+/*Product main detail*/
+
+/*Product rating detail*/
+.productRatingDetail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+.productInfo button{
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    padding:0.5%;
+    margin-top: 0.5%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+.productInfo button:hover{
+    background-color: rgb(196, 194, 194);
+    color: black;
+}
+.productInfo{
+    width: 70%;
+    margin-left: 25%;
+}
+.categories{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 6%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.productSection{
+    width:40%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.productRate{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.productRate button{    
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+    padding:1%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 0.5%;
+    border: none;
+    cursor: pointer;
+}
+/*Product rating detail*/
+
+
+/*Reviews from the users*/
+
+h1{
+    margin-top: 1%;
+}
+h1 i{
+    margin-left: 0.5%;
+    font-size: 40px;
+}
+.reviewSection{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0.5%;
+    margin-bottom: 2%;
+}
+.reviewContainer{
+    padding: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.69) ;
+    width: 100%;
+    border-radius: 8px;
+    height: 100%;
+    transition: background-color 0.3s ease;
+}
+.reviewContainer:hover{
+    background-color: rgb(196, 194, 194);
+    cursor: pointer;
+}
+.reviews{
+    display: flex;
+    flex-direction: column;
+}
+.reviewData{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.reviewData h1{
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+.line{
+    border-top: 1px solid black;
+    width: 20rem;
+}
+.reviewData 
+.reviewStarsContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.view{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.checked {
+    color: rgb(210, 210, 10) !important;
+  }
+fa-icon{
+    color: rgb(97, 97, 75);
+}
+
+/* Styles for the Go button */
+.go-button {
+    background-color:  #161616; /* Green background */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding inside the button */
+    text-align: center; /* Center text horizontally */
+    text-decoration: none; /* Remove underline from text */
+    display: inline-block; /* Display as inline-block */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Drop shadow */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    position:absolute;
+    top: 30px;
+    right: 20px;
+  }
+  
+  /* Hover effect */
+  .go-button:hover {
+    background-color: rgb(196, 194, 194); /* Darker green on hover */
+    color: black;
+  }
+  .aboutApp{
+    height: 180px;
+    width: 40vw;
+    background-color: rgb(0, 0, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.69);
+    color:white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px; 
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.aboutApp h1{
+    margin-top: 4px;
+    font-size: 28px;
+}
+.aboutApp p{
+    font-size: 20px;
+    line-height: 1;
+    margin-top: 4px;
+}
+.aboutApp:hover{
+    background-color: rgb(196, 194, 194);
+    cursor: pointer;
+    color: black;
+}

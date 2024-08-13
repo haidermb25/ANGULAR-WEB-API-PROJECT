@@ -1,0 +1,28 @@
+
+  <div class="itemsPortal">
+    <div class="itemCard" *ngFor="let item of data">
+      <div class="image">
+        <img
+          *ngIf="item.images && item.images.length > 0"
+          [src]="item.images"
+          (click)="passItemId(this.item)"
+          alt="Hy Everyone"
+        />
+        <span *ngIf="!item.images || item.images.length === 0"
+          >Image Not Available</span
+        >
+      </div>
+      <div class="about info">{{ item.title }}</div>
+      <div class="rating info">
+        <fa-icon [icon]="faStar"></fa-icon>&nbsp;<b>{{ item.rating }}</b>
+      </div>
+      <div class="price info"><b>Price: </b>{{ item.price }}</div>
+    </div>
+  </div>
+
+<div class="itemsPortal">
+  <div *ngIf="!data">Loading items...</div>
+</div>
+
+<router-outlet></router-outlet>
+

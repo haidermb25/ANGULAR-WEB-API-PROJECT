@@ -1,0 +1,133 @@
+<div class="completeProduct" *ngIf="userData">
+  <!--Show the main detail of the product-->
+
+  <!--*****************************************************************-->
+  <div class="productMainDetail">
+    <!--Main div which show main detail-->
+    <div class="mainDetail">
+      <!--Starting description of the-->
+      <div class="description">
+        <h2>{{ userData.description }}</h2>
+      </div>
+
+      <!--product detail-->
+      <div class="innerDetail">
+        <!--Name of the product-->
+        <div class="name">
+          <p><b>Price: </b></p>
+          <p><b>Stock: </b></p>
+        </div>
+        <!--Value of the product-->
+        <div class="value">
+          <p>{{ userData.price }} <b>$</b></p>
+          <p>{{ userData.stock }}</p>
+        </div>
+      </div>
+      <div class="aboutApp">
+        <h1>ShopEase</h1>
+        <p>
+          "Shopease is an intuitive e-commerce platform designed for seamless
+          shopping experiences. It offers a diverse range of products, easy
+          navigation, and secure transactions, ensuring convenience for all
+          users. With its responsive design and robust features, Shopease caters
+          to modern shopping needs with efficiency and reliability."
+        </p>
+      </div>
+    </div>
+    <!--Div which will show the product picture-->
+    <div class="productPicture">
+      <img [src]="userData.images" alt= />
+      <div class="discountCard">
+        <p>{{ userData.discountPercentage }}% OFF</p>
+      </div>
+    </div>
+  </div>
+  <!--*****************************************************************-->
+
+  <!--*****************************************************************-->
+  <div class="productRatingDetail">
+    <!--All about the reviews-->
+    <!-- <h1><i>Reviews:</i></h1> -->
+    <div class="reviewSection">
+      <h1>
+        <b><i>Reviews</i></b>
+      </h1>
+      <div class="reviewContainer">
+        <div
+          class="reviews"
+          *ngFor="let review of userData.reviews; let i = index"
+        >
+          <div class="reviewData">
+            <p>
+              <b>{{ review.reviewerName }}</b>
+            </p>
+            <p>
+              <i>{{ review.comment }}</i>
+            </p>
+            <!--Show the stars and date together-->
+            <div class="view">
+              <div class="reviewStarsContainer">
+                <div class="reviewStars" *ngFor="let i of [1, 2, 3, 4, 5]">
+                  <fa-icon
+                    [icon]="faStar"
+                    [ngClass]="{
+                      checked: review.rating && i <= review.rating
+                    }"
+                  ></fa-icon>
+                </div>
+              </div>
+              <p>{{ review.date | date : "MMMM d, yyyy" }}</p>
+            </div>
+            <!--Show the stars and date together-->
+            <div class="line" *ngIf="i != userData.reviews.length - 1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--All about the reviews-->
+    <div class="productSection">
+      <div class="productRate">
+        <div class="title">
+          <h2>{{ userData.title }}</h2>
+        </div>
+        <div class="categories">
+          <h2 style="font-size: larger">Categories:</h2>
+          <button>{{ tags[0] }}</button>
+          <button>{{ tags[1] }}</button>
+        </div>
+        <div class="productInfo">
+          <button>
+            <b>Brand:</b>&nbsp;&nbsp;&nbsp;&nbsp; {{ userData.brand }}</button
+          ><br />
+          <button><b>sku:</b>&nbsp;&nbsp;&nbsp;&nbsp; {{ userData.sku }}</button
+          ><br />
+          <button>
+            <b>Warranty Information:</b>&nbsp;&nbsp;&nbsp;&nbsp;
+            {{ userData.warrantyInformation }}</button
+          ><br />
+          <button>
+            <b>Shipping Information:</b>&nbsp;&nbsp;&nbsp;&nbsp;
+            {{ userData.shippingInformation }}</button
+          ><br />
+          <button>
+            <b>Availability Status:</b>&nbsp;&nbsp;&nbsp;&nbsp;
+            {{ userData.availabilityStatus }}</button
+          ><br />
+          <button>
+            <b>Return Policy:</b>&nbsp;&nbsp;&nbsp;&nbsp;
+            {{ userData.returnPolicy }}</button
+          ><br />
+          <button>
+            <b>Minimum Order Quantity:</b>&nbsp;&nbsp;&nbsp;&nbsp;
+            {{ userData.minimumOrderQuantity }}</button
+          ><br />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--*****************************************************************-->
+
+  <div class="EmptyObject" *ngIf="!userData">
+    <h1>Loading object ........</h1>
+  </div>
+</div>

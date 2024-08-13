@@ -1,0 +1,51 @@
+*{    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    padding: 0px;
+    margin: 0px;
+}
+.itemCard{
+    width: 280px;
+    min-height: 40px;
+    height: 300px;
+    margin: 1%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 4px;
+    border-radius: 8px;
+}
+.itemCard:hover{
+    cursor: pointer;
+    opacity: 6;
+    background-color:rgb(241, 241, 241);
+}
+.image{
+    height: 60%;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+.image img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.info{
+    margin-left: 8px;
+}
+fa-icon{
+    color:  rgb(210, 210, 10);
+}
+.itemsPortal{
+    margin-top: 1%;
+    width: 100%; 
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
